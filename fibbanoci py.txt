@@ -1,0 +1,15 @@
+def fibonacci_iterative(n):
+    if n <= 0:
+        print("Invalid input")
+        return
+
+    a, b = 0, 1
+    print(f"Fibonacci series up to {n} terms:")
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+    print()
+
+# Example usage
+n = int(input("Enter the number of terms: "))
+fibonacci_iterative(n)
