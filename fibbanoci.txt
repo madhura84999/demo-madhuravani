@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+// Function to compute Fibonacci numbers iteratively
+void fibonacci_iterative(int n) {
+    if (n <= 0) {
+        printf("Invalid input\n");
+        return;
+    }
+    
+    unsigned long long a = 0, b = 1, c;
+
+    printf("Fibonacci series up to %d terms:\n", n);
+    for (int i = 1; i <= n; i++) {
+        printf("%llu ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    printf("\n");
+}
+
+int main() {
+    int n;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    
+    fibonacci_iterative(n);
+
+    return 0;
+}
